@@ -62,3 +62,24 @@ void MainWindow::on_pushButton_clicked()
     trem5->start();
     trem6->start();
 }
+
+
+void MainWindow::on_pushButton_2_clicked()
+{
+    trem1->finalizar();
+    trem2->finalizar();
+    trem3->finalizar();
+    trem4->finalizar();
+    trem5->finalizar();
+    trem6->finalizar();
+}
+
+void MainWindow::on_pushButton_3_clicked()
+{
+    trem1->retomar();
+    trem2->retomar();
+    trem3->retomar();
+    trem4->retomar();
+    trem5->retomar();
+    trem6->retomar();
+}

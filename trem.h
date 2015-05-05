@@ -10,6 +10,7 @@ class Trem: public QThread{
         //~Trem();
         void run();
         void finalizar();
+        void retomar();
 
     signals:
         void updateGUI(int, int, int);
