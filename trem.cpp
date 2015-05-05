@@ -26,6 +26,7 @@ void Trem::run(){
                     semaforo[0].lock();
                 }
 
+
                 if (x < 300 && y == 80)
                     x += 10;
                 else if (x == 300 && y < 200)
@@ -53,6 +54,7 @@ void Trem::run(){
                     semaforo[4].lock();
                     semaforo[1].lock();
                 }
+
 
                 if (x < 530 && y == 80)
                     x += 10;
@@ -86,6 +88,7 @@ void Trem::run(){
                     semaforo[1].lock();
                     semaforo[5].lock();
                 }
+
 
                 if (x < 760 && y == 80)
                     x += 10;
@@ -151,6 +154,7 @@ void Trem::run(){
                     semaforo[8].lock();
                 }
 
+
                 if (x < 640 && y == 200)
                     x += 10;
                 else if (x == 640 && y < 320)
@@ -183,6 +187,7 @@ void Trem::run(){
                     semaforo[8].lock();
                     semaforo[7].lock();
                 }
+
 
                 if (x < 530 && y == 320)
                     x += 10;
