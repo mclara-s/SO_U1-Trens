@@ -1,83 +1,83 @@
 T1 colide com T4 { semaforo 3
-	if x = 280 and y = 80 | semaforo 3.lock()
-	if x = 160 and y = 200 | semaforo 3.unlock()
+	if T1.x == 280 and T1.y == 80 | semaforo 3.lock()
+	if T1.x == 160 and T1.y == 200 | semaforo 3.unlock()
 }
 T1 colide com T2 { semaforo 1
-	if x = 280 and y = 80 | semaforo 1.lock()
-	if x = 280 and y = 200 | semaforo 1.unlock()
+	if T1.x == 280 and T1.y == 80 | semaforo 1.lock()
+	if T1.x == 280 and T1.y == 200 | semaforo 1.unlock()
 }
 
 
 
 T2 colide com T1 { semaforo 1
-	if x = 510 and y = 80 | semaforo 1.lock()
-	if x = 320 and y = 80 | semaforo 1.unlock()
+	if T2.x == 510 and T2.y == 80 | semaforo 1.lock()
+	if T2.x == 320 and T2.y == 80 | semaforo 1.unlock()
 }
 T2 colide com T4 { semaforo 4
-	if x = 510 and y = 80 | semaforo 4.lock()
-	if x = 300 and y = 180 | semaforo 4.unlock()
+	if T2.x == 510 and T2.y == 80 | semaforo 4.lock()
+	if T2.x == 300 and T2.y == 180 | semaforo 4.unlock()
 }
 T2 colide com T5 { semaforo 5
-	if x = 510 and y = 80 | semaforo 5.lock()
-	if x = 390 and y = 200 | semaforo 5.unlock()
+	if T2.x == 510 and T2.y == 80 | semaforo 5.lock()
+	if T2.x == 390 and T2.y == 200 | semaforo 5.unlock()
 }
 T2 colide com T3 { semaforo 2
-	if x = 510 and y = 80 | semaforo 2.lock()
-	if x = 510 and y = 200 | semaforo 2.unlock()
+	if T2.x == 510 and T2.y == 80 | semaforo 2.lock()
+	if T2.x == 510 and T2.y == 200 | semaforo 2.unlock()
 }
 
 
 T3 colide com T2 { semaforo 2
-	if x = 660 and y = 200 | semaforo 2.lock()
-	if x = 550 and y = 80 | semaforo 2.unlock()
+	if T3.x == 660 and T3.y == 200 | semaforo 2.lock()
+	if T3.x == 550 and T3.y == 80 | semaforo 2.unlock()
 }
 T3 colide com T5 { semaforo 6
-	if x = 660 and y = 200 | semaforo 6.lock()
-	if x = 530 and y = 180 | semaforo 6.unlock()
+	if T3.x == 660 and T3.y == 200 | semaforo 6.lock()
+	if T3.x == 530 and T3.y == 180 | semaforo 6.unlock()
 }
 
 
 T4 colide com T6 { semaforo 8
-	if x = 180 and y = 220 | semaforo 8.lock()
-	if x = 280 and y = 320 | semaforo 8.unlock()
+	if T4.x == 180 and T4.y == 220 | semaforo 8.lock()
+	if T4.x == 280 and T4.y == 320 | semaforo 8.unlock()
 }
 T4 colide com T5 { semaforo 7
-	if x = 180 and y = 220 | semaforo 7.lock()
-	if x = 390 and y = 320 | semaforo 7.unlock()
+	if T4.x == 180 and T4.y == 220 | semaforo 7.lock()
+	if T4.x == 390 and T4.y == 320 | semaforo 7.unlock()
 }
 T4 colide com T2 { semaforo 4
-	if x = 180 and y = 220 | semaforo 4.lock()
-	if x = 410 and y = 220 | semaforo 4.unlock()
+	if T4.x == 180 and T4.y == 220 | semaforo 4.lock()
+	if T4.x == 410 and T4.y == 220 | semaforo 4.unlock()
 }
 T4 colide com T1 { semaforo 3
-	if x = 180 and y = 220 | semaforo 3.lock()
-	if x = 320 and y = 200 | semaforo 3.unlock()
+	if T4.x == 180 and T4.y == 220 | semaforo 3.lock()
+	if T4.x == 320 and T4.y == 200 | semaforo 3.unlock()
 }
 
 
 T5 colide com T3 { semaforo 6
-	if x = 550 and y = 320 | semaforo 6.lock()
-	if x = 640 and y = 220 | semaforo 6.unlock()
+	if T5.x == 550 and T5.y == 320 | semaforo 6.lock()
+	if T5.x == 640 and T5.y == 220 | semaforo 6.unlock()
 }
 T5 colide com T2 { semaforo 5
-	if x = 550 and y = 320 | semaforo 5.lock()
-	if x = 550 and y = 200 | semaforo 5.unlock()
+	if T5.x == 550 and T5.y == 320 | semaforo 5.lock()
+	if T5.x == 550 and T5.y == 200 | semaforo 5.unlock()
 }
 T5 colide com T4 { semaforo 7
-	if x = 550 and y = 320 | semaforo 7.lock()
-	if x = 430 and y = 200 | semaforo 7.unlock()
+	if T5.x == 550 and T5.y == 320 | semaforo 7.lock()
+	if T5.x == 430 and T5.y == 200 | semaforo 7.unlock()
 }
 T5 colide com T6 { semaforo 9
-	if x = 550 and y = 320 | semaforo 9.lock()
-	if x = 410 and y = 300 | semaforo 9.unlock()
+	if T5.x == 550 and T5.y == 320 | semaforo 9.lock()
+	if T5.x == 410 and T5.y == 300 | semaforo 9.unlock()
 }
 
 
 T6 colide com T5 { semaforo 9
-	if x = 300 and y = 340 | semaforo 9.lock()
-	if x = 530 and y = 340 | semaforo 9.unlock()
+	if T6.x == 300 and T6.y == 340 | semaforo 9.lock()
+	if T.x == 530 and T6.y == 340 | semaforo 9.unlock()
 }
 T6 colide com T4 { semaforo 8
-	if x = 300 and y = 340 | semaforo 8.lock()
-	if x = 430 and y = 320 | semaforo 8.unlock()
+	if T6.x == 300 and T6.y == 340 | semaforo 8.lock()
+	if T6.x == 430 and T6.y == 320 | semaforo 8.unlock()
 }
