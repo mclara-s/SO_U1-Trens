@@ -1,6 +1,10 @@
 #include "trem.h"
 #include <QtCore>
 
+#include <QMutex>
+
+QMutex mutex[9];
+
 Trem::Trem(int ID, int x, int y)
 {
     this->ID = ID;
@@ -8,6 +12,7 @@ Trem::Trem(int ID, int x, int y)
     this->y = y;
     stop = false;
     velocidade = 100;
+    //mutex[ID].lock();
 }
 
 void Trem::run(){
