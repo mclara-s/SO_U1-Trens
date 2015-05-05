@@ -9,8 +9,7 @@ class Trem: public QThread{
         Trem(int, int, int);
         //~Trem();
         void run();
-        void finalizar();
-        void retomar();
+        void parar_retomar();
 
     signals:
         void updateGUI(int, int, int);

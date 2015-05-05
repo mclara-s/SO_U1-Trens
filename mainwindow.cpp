@@ -66,20 +66,10 @@ void MainWindow::on_pushButton_clicked()
 
 void MainWindow::on_pushButton_2_clicked()
 {
-    trem1->finalizar();
-    trem2->finalizar();
-    trem3->finalizar();
-    trem4->finalizar();
-    trem5->finalizar();
-    trem6->finalizar();
-}
-
-void MainWindow::on_pushButton_3_clicked()
-{
-    trem1->retomar();
-    trem2->retomar();
-    trem3->retomar();
-    trem4->retomar();
-    trem5->retomar();
-    trem6->retomar();
+    trem1->parar_retomar();
+    trem2->parar_retomar();
+    trem3->parar_retomar();
+    trem4->parar_retomar();
+    trem5->parar_retomar();
+    trem6->parar_retomar();
 }

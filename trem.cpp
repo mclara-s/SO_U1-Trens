@@ -212,12 +212,8 @@ void Trem::run(){
     }
 }
 
-void Trem::finalizar(){
-    stop = true;
-}
-
-void Trem::retomar(){
-    stop = false;
+void Trem::parar_retomar(){
+    stop = !stop;
 }
 
 /*
