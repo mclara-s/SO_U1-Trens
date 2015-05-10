@@ -5,13 +5,13 @@
 
 QMutex semaforo[9];
 
-Trem::Trem(int ID, int x, int y)
+Trem::Trem(int ID, int x, int y, int vel)
 {
     this->ID = ID;  
     this->x = x;
     this->y = y;
     stop = false;
-    velocidade = 100;
+    velocidade = vel;
 }
 
 void Trem::run(){
@@ -22,8 +22,11 @@ void Trem::run(){
             case 1:
                 /* ----- lock's nos semaforos ----- */
                 if(x == 280 && y == 80){
-                    semaforo[2].lock();
                     semaforo[0].lock();
+                    semaforo[2].lock();
+
+                    //semaforo[2].lock();
+                    //semaforo[0].lock();
                 }
 
 
@@ -48,13 +51,22 @@ void Trem::run(){
                 break;
             case 2:
                 /* ----- lock's nos semaforos ----- */
-                if(x == 510 && y == 80){
+                if(x == 510 && y == 80){           
+                    semaforo[1].lock();
+                    semaforo[4].lock();
+                    semaforo[3].lock();
                     semaforo[0].lock();
+
+                    /*semaforo[0].lock();
                     semaforo[3].lock();
                     semaforo[4].lock();
-                    semaforo[1].lock();
+                    semaforo[1].lock();*/
                 }
 
+/*                if (x == 430 && y == 200){
+                    semaforo[0].lock();
+                    semaforo[3].lock();
+                }*/
 
                 if (x < 530 && y == 80)
                     x += 10;
@@ -85,8 +97,11 @@ void Trem::run(){
             case 3:
                 /* ----- lock's nos semaforos ----- */
                 if(x == 660 && y == 200){
-                    semaforo[1].lock();
                     semaforo[5].lock();
+                    semaforo[1].lock();
+
+                    //semaforo[1].lock();
+                    //semaforo[5].lock();
                 }
 
 
@@ -113,12 +128,22 @@ void Trem::run(){
             case 4:
                 /* ----- lock's nos semaforos ----- */
                 if(x == 180 && y == 220){
+                    semaforo[2].lock();
+                    semaforo[3].lock();
+                    semaforo[6].lock();
                     semaforo[7].lock();
+
+                    /*semaforo[7].lock();
                     semaforo[6].lock();
                     semaforo[3].lock();
-                    semaforo[2].lock();
+                    semaforo[2].lock();*/
                 }
 
+                /*if (x == 390 && y == 200){
+                    semaforo[7].lock();
+                    semaforo[6].lock();
+                }
+*/
                 if (x < 410 && y == 200)
                     x += 10;
                 else if (x == 410 && y < 320)
@@ -148,12 +173,21 @@ void Trem::run(){
             case 5:
                 /* ----- lock's nos semaforos ----- */
                 if(x == 550 && y == 320){
+                    semaforo[8].lock();
+                    semaforo[6].lock();
+                    semaforo[4].lock();
                     semaforo[5].lock();
+
+                    /*semaforo[5].lock();
                     semaforo[4].lock();
                     semaforo[6].lock();
-                    semaforo[8].lock();
+                    semaforo[8].lock();*/
                 }
 
+                /*if (x == 410 && y == 220){
+                    semaforo[5].lock();
+                    semaforo[4].lock();
+                }*/
 
                 if (x < 640 && y == 200)
                     x += 10;
@@ -184,8 +218,11 @@ void Trem::run(){
             case 6:
                 /* ----- lock's nos semaforos ----- */
                 if(x == 300 && y == 340){
-                    semaforo[8].lock();
                     semaforo[7].lock();
+                    semaforo[8].lock();
+
+                    //semaforo[8].lock();
+                    //semaforo[7].lock();
                 }
 
 

@@ -6,7 +6,7 @@
 class Trem: public QThread{
     Q_OBJECT
     public:
-        Trem(int, int, int);
+        Trem(int, int, int, int);
         //~Trem();
         void run();
         void parar_retomar();
