@@ -258,6 +258,10 @@ void Trem::parar_retomar(){
     stop = !stop;
 }
 
+void Trem::changeSpeed(int speed){
+    velocidade = speed;
+}
+
 /*
 Trem::~Trem()
 {

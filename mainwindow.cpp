@@ -21,6 +21,37 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(trem5, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
     connect(trem6, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
 
+    receberEntrada = new getEntry();
+    connect(receberEntrada, SIGNAL(entry(int, int, bool)), SLOT(updateTrem(int, int, bool)));
+}
+
+void MainWindow::updateTrem(int id, int speed, bool stop){
+    switch(id){
+    case 1:
+        trem1->changeSpeed(speed);
+        /*
+         //### SIMULAÇÃO DO BOTÃO DO GALILEO ###
+         if(stop_is_pressed){
+            trem1->parar_retomar();
+        }
+        */
+        break;
+    case 2:
+        trem2->changeSpeed(speed);
+        break;
+    case 3:
+        trem3->changeSpeed(speed);
+        break;
+    case 4:
+        trem4->changeSpeed(speed);
+        break;
+    case 5:
+        trem5->changeSpeed(speed);
+        break;
+    case 6:
+        trem6->changeSpeed(speed);
+        break;
+    }
 }
 
 void MainWindow::updateInterface(int id, int x, int y){
@@ -61,6 +92,7 @@ void MainWindow::on_pushButton_clicked()
     trem4->start();
     trem5->start();
     trem6->start();
+    receberEntrada->start();
 }
 
 

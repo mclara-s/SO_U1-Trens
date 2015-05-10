@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "trem.h"
+#include "getentry.h"
 
 namespace Ui {
 class MainWindow;
@@ -18,6 +19,7 @@ public:
 
 public slots:
     void updateInterface(int, int, int);
+    void updateTrem(int, int, bool);
 
 private slots:
     void on_pushButton_clicked();
@@ -26,6 +28,7 @@ private slots:
 private:
     Ui::MainWindow *ui;
     Trem *trem1, *trem2, *trem3, *trem4, *trem5, *trem6;
+    getEntry *receberEntrada;
 };
 
 #endif // MAINWINDOW_H

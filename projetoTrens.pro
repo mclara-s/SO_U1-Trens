@@ -14,9 +14,11 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mainwindow.cpp \
-    trem.cpp
+    trem.cpp \
+    getentry.cpp
 
 HEADERS  += mainwindow.h \
-    trem.h
+    trem.h \
+    getentry.h
 
 FORMS    += mainwindow.ui

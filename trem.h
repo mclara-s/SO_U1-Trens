@@ -10,6 +10,7 @@ class Trem: public QThread{
         //~Trem();
         void run();
         void parar_retomar();
+        void changeSpeed(int);
 
     signals:
         void updateGUI(int, int, int);
