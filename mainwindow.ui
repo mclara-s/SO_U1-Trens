@@ -106,14 +106,14 @@ font: 75 12pt &quot;Arial&quot;;
    <widget class="QPushButton" name="pushButton">
     <property name="geometry">
      <rect>
-      <x>310</x>
+      <x>360</x>
       <y>490</y>
-      <width>98</width>
+      <width>121</width>
       <height>31</height>
      </rect>
     </property>
     <property name="text">
-     <string>Iniciar</string>
+     <string>Parar/Retomar</string>
     </property>
    </widget>
    <widget class="QLabel" name="label_trilho1_5">
@@ -444,19 +444,6 @@ font: 75 12pt &quot;Arial&quot;;
      <string>T6</string>
     </property>
    </widget>
-   <widget class="QPushButton" name="pushButton_2">
-    <property name="geometry">
-     <rect>
-      <x>430</x>
-      <y>490</y>
-      <width>111</width>
-      <height>31</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string>Parar/Retomar</string>
-    </property>
-   </widget>
    <zorder>label_trilho1</zorder>
    <zorder>label_trilho1_2</zorder>
    <zorder>label_trilho1_3</zorder>
@@ -482,7 +469,6 @@ font: 75 12pt &quot;Arial&quot;;
    <zorder>label_Trem1</zorder>
    <zorder>label_Trem2</zorder>
    <zorder>label_Trem4</zorder>
-   <zorder>pushButton_2</zorder>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

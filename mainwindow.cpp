@@ -23,33 +23,66 @@ MainWindow::MainWindow(QWidget *parent) :
 
     receberEntrada = new getEntry();
     connect(receberEntrada, SIGNAL(entry(int, int, bool)), SLOT(updateTrem(int, int, bool)));
+
+    trem1->start();
+    trem2->start();
+    trem3->start();
+    trem4->start();
+    trem5->start();
+    trem6->start();
+    receberEntrada->start();
+
 }
 
 void MainWindow::updateTrem(int id, int speed, bool stop){
     switch(id){
     case 1:
-        trem1->changeSpeed(speed);
-        /*
-         //### SIMULAÇÃO DO BOTÃO DO GALILEO ###
-         if(stop_is_pressed){
+        if(stop){
             trem1->parar_retomar();
         }
-        */
+        else{
+            trem1->changeSpeed(speed);
+        }
         break;
     case 2:
-        trem2->changeSpeed(speed);
+        if(stop){
+            trem2->parar_retomar();
+        }
+        else{
+            trem2->changeSpeed(speed);
+        }
         break;
     case 3:
-        trem3->changeSpeed(speed);
+        if(stop){
+            trem3->parar_retomar();
+        }
+        else{
+            trem3->changeSpeed(speed);
+        }
         break;
     case 4:
-        trem4->changeSpeed(speed);
+        if(stop){
+            trem4->parar_retomar();
+        }
+        else{
+            trem4->changeSpeed(speed);
+        }
         break;
     case 5:
-        trem5->changeSpeed(speed);
+        if(stop){
+            trem5->parar_retomar();
+        }
+        else{
+            trem5->changeSpeed(speed);
+        }
         break;
     case 6:
-        trem6->changeSpeed(speed);
+        if(stop){
+            trem6->parar_retomar();
+        }
+        else{
+            trem6->changeSpeed(speed);
+        }
         break;
     }
 }
@@ -85,18 +118,6 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::on_pushButton_clicked()
-{
-    trem1->start();
-    trem2->start();
-    trem3->start();
-    trem4->start();
-    trem5->start();
-    trem6->start();
-    receberEntrada->start();
-}
-
-
-void MainWindow::on_pushButton_2_clicked()
 {
     trem1->parar_retomar();
     trem2->parar_retomar();

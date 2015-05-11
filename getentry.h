@@ -8,7 +8,7 @@ Q_OBJECT;
 public:
     getEntry();
     ~getEntry();
-    void read();
+    void run();
 signals:
     void entry(int, int, bool);
 };
