@@ -115,11 +115,8 @@ void getEntry::run(){
 
       //Fechar a conexão cliente criada em accept
       close(conexaoClienteId);
+
+
+      emit entry(id, velocidade, stop);
     }
-    //while(true){
-        //cin >> id;
-        //cin >> speed;
-        //cin >> stop; // true or false
-        //emit entry(id, speed, stop);
-    //}
 }
