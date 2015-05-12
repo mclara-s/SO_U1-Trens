@@ -60,7 +60,7 @@ void getEntry::run(){
       //Identificador de uma conexao cliente
       int conexaoClienteId;
 
-      //Caracter lido do cliente
+      //dados lidos do cliente
       int id;
       int velocidade;
       bool stop;
@@ -94,15 +94,15 @@ void getEntry::run(){
         perror ("Error recv\n");
         exit(1);
       }
-      printf("Servidor: dado recebido do cliente - %i\n", id);
+      printf("id recebido do cliente: %i\n", id);
 
       //Recebendo a velocidade do trem do cliente
-      if ( (bytesLidos = recv (conexaoClienteId, &velocidade, 1, 0)) == -1 )
+      if ( (bytesLidos = recv (conexaoClienteId, &velocidade, 16, 0)) == -1 )
       {
         perror ("Error recv\n");
         exit(1);
       }
-      printf("Servidor: dado recebido do cliente - %i\n", velocidade);
+      printf("velocidade recebida do cliente: %i\n", velocidade);
 
 
       //Recebendo o stop do trem do cliente
@@ -111,7 +111,7 @@ void getEntry::run(){
         perror ("Error recv\n");
         exit(1);
       }
-      printf("Servidor: dado recebido do cliente - %i\n", stop);
+      printf("stop recebido do cliente: %i\n", stop);
 
       //Fechar a conexão cliente criada em accept
       close(conexaoClienteId);
