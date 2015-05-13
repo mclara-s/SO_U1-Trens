@@ -1,5 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include <iostream>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -8,11 +9,18 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->setupUi(this);
 
     trem1 = new Trem(1, 160, 200, 100);
-    trem2 = new Trem(2, 320, 80, 80);
-    trem3 = new Trem(3, 550, 80, 50);
-    trem4 = new Trem(4, 280, 320, 40);
-    trem5 = new Trem(5, 640, 220, 70);
-    trem6 = new Trem(6, 530, 340, 90);
+    trem2 = new Trem(2, 320, 80, 40);
+    trem3 = new Trem(3, 550, 80, 150);
+    trem4 = new Trem(4, 280, 320, 70);
+    trem5 = new Trem(5, 640, 220, 90);
+    trem6 = new Trem(6, 530, 340, 40);
+
+    /*trem1 = new Trem(1, 90, 80, 200);
+    trem2 = new Trem(2, 320, 80, 40);
+    trem3 = new Trem(3, 550, 80, 150);
+    trem4 = new Trem(4, 200, 200, 70);
+    trem5 = new Trem(5, 430, 200, 90);
+    trem6 = new Trem(6, 320, 320, 20);*/
 
     connect(trem1, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
     connect(trem2, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
@@ -39,6 +47,7 @@ void MainWindow::updateTrem(int id, int speed, bool stop){
     case 1:
         if(stop){
             trem1->parar_retomar();
+            std::cout<<"ENTROU STOP ID 0\n";
         }
         else{
             trem1->changeSpeed(speed);

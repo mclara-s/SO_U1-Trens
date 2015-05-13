@@ -89,7 +89,7 @@ void getEntry::run(){
       }
 
       //Recebendo o id do trem do cliente
-      if ( (bytesLidos = recv (conexaoClienteId, &id, 1, 0)) == -1 )
+      if ( (bytesLidos = recv (conexaoClienteId, &id, 16, 0)) == -1 )
       {
         perror ("Error recv\n");
         exit(1);

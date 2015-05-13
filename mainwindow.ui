@@ -20,8 +20,8 @@
    <widget class="QLabel" name="label_Trem1">
     <property name="geometry">
      <rect>
-      <x>160</x>
-      <y>200</y>
+      <x>90</x>
+      <y>80</y>
       <width>21</width>
       <height>21</height>
      </rect>
@@ -393,8 +393,8 @@ font: 75 12pt &quot;Arial&quot;;
    <widget class="QLabel" name="label_Trem4">
     <property name="geometry">
      <rect>
-      <x>280</x>
-      <y>320</y>
+      <x>200</x>
+      <y>200</y>
       <width>21</width>
       <height>21</height>
      </rect>
@@ -411,8 +411,8 @@ font: 75 12pt &quot;Arial&quot;;
    <widget class="QLabel" name="label_Trem5">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>220</y>
+      <x>430</x>
+      <y>200</y>
       <width>21</width>
       <height>21</height>
      </rect>
@@ -429,8 +429,8 @@ font: 75 12pt &quot;Arial&quot;;
    <widget class="QLabel" name="label_Trem6">
     <property name="geometry">
      <rect>
-      <x>530</x>
-      <y>340</y>
+      <x>320</x>
+      <y>320</y>
       <width>21</width>
       <height>21</height>
      </rect>
