@@ -61,6 +61,7 @@ void getEntry::run(){
       int conexaoClienteId;
 
       //dados lidos do cliente
+      int id_final;
       int id;
       int velocidade;
       bool stop;
@@ -95,6 +96,7 @@ void getEntry::run(){
         exit(1);
       }
       printf("id recebido do cliente: %i\n", id);
+      id_final = id;//SOLUÇÃO <<<<<
 
       //Recebendo a velocidade do trem do cliente
       if ( (bytesLidos = recv (conexaoClienteId, &velocidade, 16, 0)) == -1 )
@@ -102,6 +104,7 @@ void getEntry::run(){
         perror ("Error recv\n");
         exit(1);
       }
+      //printf("id recebido do cliente: %i\n", id);
       printf("velocidade recebida do cliente: %i\n", velocidade);
 
 
@@ -111,12 +114,14 @@ void getEntry::run(){
         perror ("Error recv\n");
         exit(1);
       }
+      //printf("id recebido do cliente: %i\n", id);
       printf("stop recebido do cliente: %i\n", stop);
 
       //Fechar a conexão cliente criada em accept
       close(conexaoClienteId);
 
-
-      emit entry(id, velocidade, stop);
+      //printf("\nDANDO EMIT ENTRY(%i, %i, %i)\n", id, velocidade, stop);
+      //printf("\nDANDO EMIT ENTRY(%i, %i, %i)\n", id_final, velocidade, stop);
+      emit entry(id_final, velocidade, stop);
     }
 }

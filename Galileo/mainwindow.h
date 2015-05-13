@@ -27,7 +27,7 @@ private slots:
 
     void on_dial_valueChanged(int value);
 
-    void on_pushButton_toggled(bool checked);
+    void on_pushButton_pressed();
 
 private:
     Ui::MainWindow *ui;

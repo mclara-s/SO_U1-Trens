@@ -20,7 +20,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     id = 1;
     velocidade = 40;
-    stop = true;
+    stop = false;
 
     ui->dial->setRange(0, 4095);
 
@@ -92,6 +92,7 @@ void MainWindow::on_pushButton_4_pressed()
 {
     //send
     send();
+    stop = false;
 }
 
 void MainWindow::on_pushButton_2_pressed()
@@ -108,7 +109,7 @@ void MainWindow::on_dial_valueChanged(int value)
     ui->lcdNumber_2->display(velocidade);
 }
 
-void MainWindow::on_pushButton_toggled(bool checked)
+void MainWindow::on_pushButton_pressed()
 {
-    stop = checked;
+    stop = !stop;
 }

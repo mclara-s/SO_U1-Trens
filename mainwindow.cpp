@@ -43,11 +43,11 @@ MainWindow::MainWindow(QWidget *parent) :
 }
 
 void MainWindow::updateTrem(int id, int speed, bool stop){
+    std::cout<<std::endl<<"ENTROU updateTrem. id: "<<id<<"  |  velocidade: "<<speed<<"  |  stop: "<<stop<<std::endl;;
     switch(id){
     case 1:
         if(stop){
             trem1->parar_retomar();
-            std::cout<<"ENTROU STOP ID 0\n";
         }
         else{
             trem1->changeSpeed(speed);
