@@ -104,12 +104,10 @@ void MainWindow::on_pushButton_2_pressed()
 
 void MainWindow::on_dial_valueChanged(int value)
 {
-    int aux = 110;
-    //int aux = 146;
+
     value /= 37;
     //value /= 7;
-    aux = aux - value;
-    velocidade = (aux+40);
+    velocidade = (value+40);
     ui->lcdNumber_2->display(velocidade);
 }
 
