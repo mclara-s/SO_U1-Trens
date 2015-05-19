@@ -22,12 +22,12 @@ MainWindow::MainWindow(QWidget *parent) :
     trem5 = new Trem(5, 430, 200, 90);
     trem6 = new Trem(6, 320, 320, 20);*/
 
-    connect(trem1, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
-    connect(trem2, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
-    connect(trem3, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
-    connect(trem4, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
-    connect(trem5, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
-    connect(trem6, SIGNAL(updateGUI(int,int,int)), SLOT(updateInterface(int, int, int)));
+    connect(trem1, SIGNAL(updateGUI(int,int,int, int)), SLOT(updateInterface(int, int, int, int)));
+    connect(trem2, SIGNAL(updateGUI(int,int,int, int)), SLOT(updateInterface(int, int, int, int)));
+    connect(trem3, SIGNAL(updateGUI(int,int,int, int)), SLOT(updateInterface(int, int, int, int)));
+    connect(trem4, SIGNAL(updateGUI(int,int,int, int)), SLOT(updateInterface(int, int, int, int)));
+    connect(trem5, SIGNAL(updateGUI(int,int,int, int)), SLOT(updateInterface(int, int, int, int)));
+    connect(trem6, SIGNAL(updateGUI(int,int,int, int)), SLOT(updateInterface(int, int, int, int)));
 
     receberEntrada = new getEntry();
     connect(receberEntrada, SIGNAL(entry(int, int, bool)), SLOT(updateTrem(int, int, bool)));
@@ -96,25 +96,31 @@ void MainWindow::updateTrem(int id, int speed, bool stop){
     }
 }
 
-void MainWindow::updateInterface(int id, int x, int y){
+void MainWindow::updateInterface(int id, int x, int y, int vel){
     switch (id){
     case 1:
         ui->label_Trem1->setGeometry(x, y, 21, 21);
+        ui->lcdNumber->display(10000/vel);
         break;
     case 2:
         ui->label_Trem2->setGeometry(x, y, 21, 21);
+        ui->lcdNumber_2->display(10000/vel);
         break;
     case 3:
         ui->label_Trem3->setGeometry(x, y, 21, 21);
+        ui->lcdNumber_3->display(10000/vel);
         break;
     case 4:
         ui->label_Trem4->setGeometry(x, y, 21, 21);
+        ui->lcdNumber_4->display(10000/vel);
         break;
     case 5:
         ui->label_Trem5->setGeometry(x, y, 21, 21);
+        ui->lcdNumber_5->display(10000/vel);
         break;
     case 6:
         ui->label_Trem6->setGeometry(x, y, 21, 21);
+        ui->lcdNumber_6->display(10000/vel);
         break;
     default:
         break;

@@ -13,7 +13,7 @@ class Trem: public QThread{
         void changeSpeed(int);
 
     signals:
-        void updateGUI(int, int, int);
+        void updateGUI(int, int, int, int);
 
     private:
         int x;

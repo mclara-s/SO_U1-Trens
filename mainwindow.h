@@ -18,7 +18,7 @@ public:
     ~MainWindow();
 
 public slots:
-    void updateInterface(int, int, int);
+    void updateInterface(int, int, int, int);
     void updateTrem(int, int, bool);
 
 private slots:

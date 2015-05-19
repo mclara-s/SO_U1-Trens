@@ -17,7 +17,7 @@ Trem::Trem(int ID, int x, int y, int vel)
 void Trem::run(){
     while(true){
         while(!stop){
-        emit updateGUI(ID, x, y);
+        emit updateGUI(ID, x, y, velocidade);
         switch(ID){
             case 1:
                 /* ----- lock's nos semaforos ----- */
