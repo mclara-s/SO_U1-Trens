@@ -108,7 +108,7 @@ void MainWindow::on_dial_valueChanged(int value)
     value /= 37;
     //value /= 7;
     velocidade = (value+40);
-    ui->lcdNumber_2->display(velocidade);
+    ui->lcdNumber_2->display(10000/velocidade);
 }
 
 void MainWindow::on_pushButton_pressed()
